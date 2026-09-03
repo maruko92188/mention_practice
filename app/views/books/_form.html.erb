@@ -1,0 +1,27 @@
+<%= form_with(model: book) do |form| %>
+  <%= render 'application/validation_errors', resource: book %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :memo, style: "display: block" %>
+    <%= form.textarea :memo %>
+  </div>
+
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div>
+    <%= form.label :picture, style: "display: block" %>
+    <%= form.file_field :picture %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

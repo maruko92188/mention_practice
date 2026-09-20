@@ -1,0 +1,13 @@
+<div>
+  <strong>この日報は以下の日報に言及されています。</strong>
+
+  <% mentions = report.mentioned_reports %>
+    <ul>
+      <% mentions.each do |mention| %>
+        <li>
+          <%= link_to mention.title, mention %>
+        </li>
+      <% end %>
+    </ul>
+
+</div>
